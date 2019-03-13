@@ -40,6 +40,7 @@ public class Springboot {
                 "   return 1\n" +
                 "end\n");
         List<String> strings = new ArrayList<>();
+        //返回值long类型
         stringDefaultRedisScript.setResultType(Long.class);
         for(int i=0;i<=10;i++){
             Long resuklt = (Long) redisTemplate.execute(stringDefaultRedisScript,list,60,10);
